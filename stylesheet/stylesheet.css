@@ -1,5 +1,5 @@
 Skip to content
-This repository
+This repository  
 Pull requests
 Issues
 Gist
@@ -45,7 +45,7 @@ RawBlameHistory     111 lines (97 sloc)  1.58 kb
 
 #menu a.parent:before {
     font-family: FontAwesome;
-    content: '\f138';
+    content: '\f138';   
     margin-right: 10px;
     color: #111;
     width: 15px;
@@ -191,7 +191,7 @@ ol{
 
 
 #column-left {
-    width: 20%;
+    width: 235px;
     height: 100%;
     background-color: #515151;
     position:absolute;
@@ -253,7 +253,7 @@ ol{
 }
 #leftmenu > li > a {
     color: #C4C4C4;
-    font-size: 14px;
+    font-size: 14px;    
     padding-left: 13px;
     border-bottom: 1px solid #585858;
 }
@@ -277,7 +277,7 @@ ol{
     font-family: FontAwesome;
     margin-left: 10px;
     margin-right: 10px;
-    transition: margin ease 0.5s;
+    transition: margin ease 0.5s;   
 }
 #leftmenu li li a:hover:before {
     margin-right: 20px;
