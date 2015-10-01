@@ -1,27 +1,389 @@
+Skip to content
+This repository  
+Pull requests
+Issues
+Gist
+ @dpardo87
+ Unwatch 1
+  Star 0
+  Fork 5
+dpardo87/dpardo87.github.io
+forked from opencart/opencart.github.io
+ branch: master  dpardo87.github.io/stylesheet/stylesheet.css
+@chris-wmchris-wm 29 minutes ago add font awesome back in
+3 contributors @danielkerr @dpardo87 @chris-wm
+RawBlameHistory     111 lines (97 sloc)  1.58 kb
+@import url("font-awesome.min.css");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700");
+
 #menu, #menu ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+    margin: 0;
+    padding: 10px;
+    line-height: 30px;
+    border: 1px solid #DDDDDD;
+    color: #888888;
 }
 #menu ul {
-	margin-left: 20px;
-	overflow: hidden;
-  	transition: max-height 0.5s ease-in-out;
+    margin-left: 20px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+#menu, #menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 #menu li > ul {
-	max-height: 0px;
+    max-height: 0px;
 }
 #menu li.open > ul {
-	max-height: 9999px;
+    max-height: 9999px;
+    color: #333
+    font-weight500;
+    margin-left:20px;
 }
+
 #menu a.parent:before {
-	font-family: FontAwesome;
-	content: '\f0da';
-	margin-right: 10px;
-	color: #333;
-	width: 15px;
+    font-family: FontAwesome;
+    content: '\f138';   
+    margin-right: 10px;
+    color: #111;
+    width: 15px;
 }
 #menu li.open > a.parent:before {
-	font-family: FontAwesome;
-	content: '\f0d7';
+    font-family: FontAwesome;
+    content: '\f13a';
+
 }
+
+#menu li.open > a.parent:active {
+    font-family: FontAwesome;
+    content: '\f13a';
+    color: #111;
+
+}
+
+
+.logo {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: width:100%;
+    position:absolute;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DDD;
+    border-bottom: 1px;
+}
+
+.mainmenu {
+    background-color: #fff;
+    border: 1px solid #DDD;
+    min-height: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 4px;
+    padding: 10px;
+    color:#DDD;
+
+}
+
+.mainmenu a.active, .mainmenu a.active:hover, .mainmenu a:hover {
+    color: #444444;
+    background: #eeeeee;
+    border: 1px solid #DDDDDD;
+    text-shadow: 0 1px 0 #FFF;
+    width: 100%;
+}
+
+.headerbar{
+    background-color: #229ac8;
+    background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
+    background-repeat: repeat-x;
+    border-color: #1f90bb #1f90bb #145e7a;
+    min-height: 40px;
+    border-radius: 4px;
+    color: #FFF;
+    padding: 10px;
+
+}
+
+.headerbar a {
+    color: #fff;
+}
+
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #333
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #333;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+/* default font size */
+
+.fa {
+    font-size: 14px;
+}
+
+/* Override the bootstrap defaults */
+h1 {
+     font-size: 30px;
+    line-height: auto;
+    color: #848484;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+h2 {
+    font-size: 25px;
+    line-height: auto;
+    color: #23a1d1;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+h3 {
+    font-size: 20px;
+    color: #848484;
+    display: inline-block;
+
+}
+h4 {
+    font-size: 15px;
+    color: #23a1d1;
+    font-weight: bold;
+}
+h5 {
+    font-size: 12px;
+}
+h6 {
+    font-size: 10.2px;
+}
+a {
+    color: #23a1d1;
+}
+a:hover {
+    text-decoration: none;
+}
+
+ol{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.imgoutline {
+    background-color:#DDD;
+    width: 100%;
+    padding: 20px;
+    float: center;
+}
+
+
+#column-left {
+    width: 235px;
+    height: 100%;
+    background-color: #515151;
+    position:absolute;
+    top: 0px;
+    padding-top: 50px;
+    z-index: 10;
+    transition: all 0.3s;
+    padding-right: 50px;
+}
+#column-left.active {
+    width: 235px;
+    display: block;
+}
+#content {
+    padding-bottom: 40px;
+    transition: all 0.3s;
+}
+#column-left + #content {
+    margin-left: 50px;
+}
+#column-left + #content + #footer {
+    margin-left: 50px;
+}
+/* Mobile */
+@media (max-width: 767px) {
+#column-left {
+    overflow: hidden;
+    display: none;
+}
+#column-left + #content {
+    margin-left: 0;
+}
+#column-left + #content + #footer {
+    margin-left: 0;
+}
+}
+/* leftmenu */
+#leftmenu, #leftmenu ul, #leftmenu li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+#leftmenu {
+    margin-bottom: 25px;
+}
+#leftmenu > li {
+    position: relative;
+}
+#leftmenu li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #515151;
+}
+#leftmenu li a i {
+    font-size: 16px;
+}
+#leftmenu > li > a {
+    color: #C4C4C4;
+    font-size: 14px;    
+    padding-left: 13px;
+    border-bottom: 1px solid #585858;
+}
+#leftmenu > li > a:hover {
+    background-color: #444444;
+}
+#leftmenu > li > a > span {
+    display: none;
+    margin-left: 8px;
+}
+#leftmenu li li a {
+    color: #9d9d9d;
+}
+#leftmenu li li a:hover {
+    color: #FFFFFF;
+    background-color: #373737;
+}
+#leftmenu li li a:before {
+    content: "\f101";
+    font-size: 14px;
+    font-family: FontAwesome;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: margin ease 0.5s;   
+}
+#leftmenu li li a:hover:before {
+    margin-right: 20px;
+}
+#leftmenu > li.active > a {
+    color: #DDDDDD;
+    background: #373737;
+}
+#leftmenu li.active li a {
+    color: #C4C4C4;
+}
+#leftmenu li li.active > a:last-child {
+    color: #FFFFFF;
+}
+#leftmenu li li.active a:last-child:before {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+#leftmenu > li > ul {
+    position: absolute;
+    left: 50px;
+    top: 0px;
+    width: 210px;
+    background-color: #444444;
+    visibility: hidden;
+}
+leftmenu    overflow: hidden;
+}
+#leftmenu > li:hover > ul {
+    visibility: visible;
+}
+#leftmenu li li a.parent:after, #column-left.active #leftmenu > li a.parent:after {
+    font-family: FontAwesome;
+    content: "\f105";
+    float: right;
+    margin-right: 8px;
+}
+#leftmenu li li.open > a.parent:after, #column-left.active #leftmenu > li.open > a.parent:after {
+    font-family: FontAwesome;
+    content: "\f107";
+    float: right;
+    margin-right: 8px;
+}
+
+
+#leftmenu li ul a {
+    padding-left: 20px;
+}
+#leftmenu li li ul a {
+    padding-left: 40px;
+}
+#leftmenu li li li ul a {
+    padding-left: 60px;
+}
+#leftmenu li li li li ul a {
+    padding-left: 80px;
+}
+
+/* leftmenu Active */
+/* Desktop */
+@media (min-width: 768px) {
+#column-left.active {
+    overflow: auto;
+}
+#column-left.active + #content {
+    margin-left: 235px;
+}
+#column-left.active + #content + #footer {
+    margin-left: 235px;
+}
+}
+/* Mobile */
+@media (max-width: 767px) {
+#column-left.active + #content {
+    position: relative;
+    left: 235px;
+}
+#column-left.active + #content + #footer {
+    position: relative;
+    left: 235px;
+}
+}
+#column-left.active {
+    width: 235px;
+}
+#column-left.active #leftmenu li i {
+    font-size: 14px;
+}
+#column-left.active #leftmenu > li > a > span {
+    display: inline;
+}
+#column-left.active #leftmenu > li > ul {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    visibility: visible;
+}
+
+.absolute{
+    position: absolute;
+}
+
+
+
+
+Status API Training Shop Blog About
+© 2015 GitHub, Inc. Terms Privacy Security Contact
